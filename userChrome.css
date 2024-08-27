@@ -108,115 +108,118 @@
 	}
 }
 
-#navigator-toolbox {
-	--zen-navigation-toolbar-min-width: 214px !important;
-}
 
-#appcontent {
-	display: flex;
-	flex-direction: column;
-		
-	width: fit-content !important;
-	max-width: fit-content !important;
-	
-	flex: 0 !important;
-	
-	overflow: visible !important;
-}
+/* Arc sidebar */
+@-moz-document url-prefix("chrome:") {
 
-#nav-bar {
-	display: grid !important;
-	grid-template-rows: 1fr;
-	grid-template-columns: 2fr calc(2 * var(--toolbarbutton-inner-padding) + 18px + 15px);
-	flex-direction: column-reverse !important;
-}
+	#navigator-toolbox {
+		--zen-navigation-toolbar-min-width: 214px !important;
+	}
 
-.titlebar-buttonbox-container {
-	grid-row-start: 1 !important;
-	grid-column-start: 1;
-}
+	#appcontent {
+		display: flex;
+		flex-direction: column;
 
-#PanelUI-button {
-	grid-row-start: 1;
-	
-	display: flex;
-	justify-content: end;
-}
+		width: fit-content !important;
+		max-width: fit-content !important;
 
+		flex: 0 !important;
 
-#nav-bar-customization-target {
-	all: unset !important;
-	
-	grid-column-start: 1 !important;;
-	grid-column-end: 3 !important;;
-	
-	min-width: 0 !important;
-	flex: 1;
-	
-	display: grid !important;
-	justify-content: space-evenly !important;
-	grid-template-columns: repeat( 5, 1fr ) !important;
-}
+		overflow: visible !important;
+	}
 
-#urlbar-container {
-	grid-column-start: 1;
-	grid-column-end: 6;
-	grid-row-start: 1;
-}
+	#nav-bar {
+		display: grid !important;
+		grid-template-rows: 1fr;
+		grid-template-columns: 2fr calc(2 * var(--toolbarbutton-inner-padding) + 18px + 15px);
+		flex-direction: column-reverse !important;
+	}
 
-#titlebar-buttonbox-container {
-	grid-row-start: 1 !important;
-	grid-row-end: 2 !important;
-	grid-column-start: 1 !important;
-	grid-column-end: 2 !important;
-}
+	.titlebar-buttonbox-container {
+		grid-row-start: 1 !important;
+		grid-column-start: 1;
+	}
 
-#nav-bar-customization-target > :is( toolbarbutton, toolbaritem ) {
-	display: block;
-	width: min-content;
-}
+	#PanelUI-button {
+		grid-row-start: 1;
 
-#nav-bar {
-	display: flex;
-	flex-direction: column;
-}
+		display: flex;
+		justify-content: end;
+	}
 
 
-#zen-tabbox-wrapper {
-	position: relative !important;
-	width: fit-content;
-}
+	#nav-bar-customization-target {
+		all: unset !important;
 
-#nav-bar > toolbartabstop {
-	display: none;
-}
+		grid-column-start: 1 !important;;
+		grid-column-end: 3 !important;;
 
-#tabbrowser-tabbox {
-  position: absolute !important;
-	
-	margin-left: 100%;
-	
-	--t-margin: -115px;
-		
-	height: calc( 100% + -1 * var( --t-margin ) );
-	width: calc( 100vw - 100% ) !important;
-	
-	top: var( --t-margin ) !important;
-}
+		min-width: 0 !important;
+		flex: 1;
 
-#urlbar-container {
-	min-width: 0 !important;
-}
+		display: grid !important;
+		justify-content: space-evenly !important;
+		grid-template-columns: repeat( 5, 1fr ) !important;
+	}
 
-#browser {
-  width: fit-content;
-}
+	#urlbar-container {
+		grid-column-start: 1;
+		grid-column-end: 6;
+		grid-row-start: 1;
+	}
 
-#urlbar-background {
-  max-width: 0px !important;
-}
+	#titlebar-buttonbox-container {
+		grid-row-start: 1 !important;
+		grid-row-end: 2 !important;
+		grid-column-start: 1 !important;
+		grid-column-end: 2 !important;
+	}
 
-#urlbar-container {
-  width: calc( 100% - 10px ) !important;
-	flex: 1 !important;
+	#nav-bar-customization-target > :is( toolbarbutton, toolbaritem ) {
+		display: block;
+		width: min-content;
+	}
+
+	#nav-bar {
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	#zen-tabbox-wrapper {
+		position: relative !important;
+		width: fit-content;
+	}
+
+	#nav-bar > toolbartabstop {
+		display: none;
+	}
+
+	#tabbrowser-tabbox {
+		position: absolute !important;
+
+		margin-left: 100%;
+
+		--t-margin: -115px;
+
+		height: calc( 100% + -1 * var( --t-margin ) );
+		width: calc( 100vw - 100% ) !important;
+
+		top: var( --t-margin ) !important;
+	}
+
+
+	/* add back later, possibly need it */
+	#urlbar-container {
+		min-width: 0 !important;
+	}
+
+	#browser {
+		width: fit-content;
+	}
+
+	#urlbar-container {
+		width: calc( 100% - 10px ) !important;
+		flex: 1 !important;
+	}
 }
