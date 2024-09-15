@@ -214,10 +214,6 @@
 		min-width: 0 !important;
 	}
 
-	#browser {
-		width: fit-content;
-	}
-
 	#urlbar-container {
 		width: calc( 100% - 10px ) !important;
 		flex: 1 !important;
